@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Duong Noi Ward | Digital Transformation Portal</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f3f3f6",
+              "secondary-fixed-dim": "#f0c100",
+              "secondary-fixed": "#ffe089",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#5d403b",
+              "background": "#f9f9fc",
+              "on-surface": "#1a1c1e",
+              "secondary": "#735c00",
+              "on-tertiary": "#ffffff",
+              "surface-tint": "#bf080b",
+              "tertiary-fixed-dim": "#9ecaff",
+              "on-primary-container": "#fff3f1",
+              "inverse-surface": "#2f3133",
+              "on-tertiary-container": "#f3f6ff",
+              "tertiary": "#105b95",
+              "primary-fixed": "#ffdad5",
+              "surface-variant": "#e2e2e5",
+              "on-secondary-container": "#6e5700",
+              "on-error-container": "#93000a",
+              "primary-fixed-dim": "#ffb4a9",
+              "on-error": "#ffffff",
+              "surface-container": "#eeeef0",
+              "on-tertiary-fixed": "#001d36",
+              "inverse-primary": "#ffb4a9",
+              "outline": "#916f6a",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#3574b0",
+              "on-background": "#1a1c1e",
+              "secondary-container": "#fecc00",
+              "surface-bright": "#f9f9fc",
+              "on-secondary-fixed": "#241a00",
+              "surface-dim": "#dadadc",
+              "primary-container": "#da251d",
+              "outline-variant": "#e6bdb7",
+              "on-primary-fixed": "#410001",
+              "on-primary": "#ffffff",
+              "primary": "#b40006",
+              "on-secondary-fixed-variant": "#574500",
+              "inverse-on-surface": "#f0f0f3",
+              "tertiary-fixed": "#d1e4ff",
+              "surface-container-highest": "#e2e2e5",
+              "on-primary-fixed-variant": "#930004",
+              "surface-container-high": "#e8e8ea",
+              "on-tertiary-fixed-variant": "#00497c",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface": "#f9f9fc"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300 ease-in-out">
+<div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center font-['Space_Grotesk'] tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-red-700 dark:text-red-600">
+                Duong Noi Ward
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-red-700 dark:text-red-500 border-b-2 border-yellow-500 pb-1" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors" href="#">News</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors" href="#">Innovation Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors" href="#">Digital Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-secondary" placeholder="Tìm kiếm dịch vụ..." type="text"/>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-md font-medium text-sm transition-transform active:scale-95 shadow-[inset_0_2px_0_rgba(255,255,255,0.15)]">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section: Asymmetric Tension -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 scale-105" data-alt="futuristic high-tech cityscape of Hanoi with digital data streams and fiber optic light trails glowing in the dusk" src="assets/hero_bg.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 w-full z-10 grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 text-secondary font-semibold text-xs tracking-widest uppercase rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                        Tiên phong công nghệ
+                    </div>
+<h1 class="font-headline text-6xl md:text-7xl font-bold text-on-background leading-[1.1] tracking-tighter">
+                        Dương Nội Số:<br/>
+<span class="text-primary">Khởi tạo tương lai</span><br/>
+                        kỹ thuật số
+                    </h1>
+<p class="text-body text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        Hệ sinh thái số toàn diện phục vụ cư dân, thúc đẩy đổi mới sáng tạo và kiến tạo cộng đồng thông minh bền vững tại cửa ngõ phía Tây Thủ đô.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-bold flex items-center gap-2 hover:bg-primary-container transition-all">
+                            Bắt đầu hành trình
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-transparent text-primary border border-outline-variant/30 px-8 py-4 rounded-md font-bold hover:bg-surface-container-low transition-all">
+                            Khám phá dự án
+                        </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="aspect-square relative">
+<div class="absolute -inset-4 bg-primary/5 rounded-full blur-3xl"></div>
+<img class="w-full h-full object-cover rounded-xl shadow-2xl relative z-10 transform translate-x-12" data-alt="modern architecture of a technology park with glass surfaces reflecting clear blue sky and futuristic geometric patterns" src="assets/hero_side.jpg"/>
+<div class="absolute bottom-12 -left-8 glass-panel p-6 rounded-xl shadow-xl z-20 border border-white/40">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest">Tốc độ xử lý</p>
+<p class="text-2xl font-headline font-bold">Real-time</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Digital Innovation Hub: Bento Grid Layout -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="font-headline text-4xl font-bold tracking-tight mb-4">Hệ sinh thái Đổi mới sáng tạo</h2>
+<div class="h-1 w-24 bg-secondary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Featured Project -->
+<div class="md:col-span-2 group relative overflow-hidden bg-surface-container-lowest rounded-xl p-8 hover:shadow-2xl transition-all duration-500">
+<div class="flex flex-col h-full justify-between relative z-10">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-weight="fill">smart_display</span>
+<h3 class="text-3xl font-headline font-bold mb-4">App Công dân số Dương Nội</h3>
+<p class="text-on-surface-variant max-w-md leading-relaxed">
+                                    Tích hợp toàn bộ dịch vụ công, thông báo từ phường và thanh toán không tiền mặt trong một ứng dụng duy nhất.
+                                </p>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                                    Trải nghiệm ngay <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+<img class="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="clean user interface design of a mobile dashboard showing data visualization and smart city icons" src="assets/app_dashboard.jpg"/>
+</div>
+<!-- Smart Office -->
+<div class="bg-surface-container-lowest rounded-xl p-8 border-b-4 border-secondary group hover:-translate-y-2 transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">corporate_fare</span>
+<h3 class="text-xl font-headline font-bold mb-4">Văn phòng số 4.0</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Số hóa 100% hồ sơ công việc tại UBND, rút ngắn thời gian xử lý thủ tục hành chính cho người dân.
+                        </p>
+<div class="w-full h-1 bg-surface-container group-hover:bg-secondary-container transition-colors"></div>
+</div>
+<!-- IoT Infrastructure -->
+<div class="bg-surface-container-lowest rounded-xl p-8 group hover:-translate-y-2 transition-all duration-300">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6">sensors</span>
+<h3 class="text-xl font-headline font-bold mb-4">Hạ tầng IoT</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Hệ thống chiếu sáng thông minh và camera an ninh tích hợp AI giám sát trật tự đô thị 24/7.
+                        </p>
+<div class="w-full h-1 bg-surface-container group-hover:bg-tertiary-fixed transition-colors"></div>
+</div>
+<!-- Tech Library -->
+<div class="md:col-span-2 bg-tertiary text-on-tertiary rounded-xl p-8 flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1">
+<h3 class="text-2xl font-headline font-bold mb-4">Trung tâm Tri thức số</h3>
+<p class="text-on-tertiary-container opacity-90 leading-relaxed mb-6">
+                                Điểm truy cập internet miễn phí và thư viện sách điện tử phục vụ nghiên cứu khoa học cho thanh thiếu niên trong địa bàn.
+                            </p>
+<button class="bg-white text-tertiary px-6 py-3 rounded-md font-bold text-sm">Xem lịch hoạt động</button>
+</div>
+<div class="w-full md:w-1/3 aspect-video rounded-lg overflow-hidden glass-panel p-2">
+<img class="w-full h-full object-cover rounded" data-alt="modern library interior with wooden bookshelves and digital terminals in a minimalist design" src="assets/library.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Metrics: Digital Depth -->
+<section class="py-24 bg-background relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="text-center space-y-2">
+<div class="text-5xl font-headline font-bold text-primary tracking-tighter">98%</div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Hồ sơ trực tuyến</div>
+</div>
+<div class="text-center space-y-2">
+<div class="text-5xl font-headline font-bold text-secondary tracking-tighter">100%</div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Phủ sóng Wifi công cộng</div>
+</div>
+<div class="text-center space-y-2">
+<div class="text-5xl font-headline font-bold text-tertiary tracking-tighter">2.5k</div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Công dân số đã đăng ký</div>
+</div>
+<div class="text-center space-y-2">
+<div class="text-5xl font-headline font-bold text-on-background tracking-tighter">04</div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Dự án Innovation Hub</div>
+</div>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+</section>
+<!-- News & Updates: Editorial Style -->
+<section class="py-24 bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline text-4xl font-bold tracking-tight mb-2">Tin tức &amp; Sự kiện</h2>
+<p class="text-on-surface-variant">Cập nhật những chuyển động mới nhất về công nghệ tại Dương Nội</p>
+</div>
+<a class="text-primary font-bold border-b border-primary pb-1 hidden md:block" href="#">Tất cả tin bài</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Main Story -->
+<div class="lg:col-span-7 group cursor-pointer">
+<div class="overflow-hidden rounded-xl mb-6">
+<img class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="professional technician working on a circuit board with soldering iron and precision tools in a high-tech lab" src="assets/circuit_board.jpg"/>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-widest">Kỹ thuật số • 12/10/2024</span>
+<h3 class="text-3xl font-headline font-bold mt-4 mb-4 group-hover:text-primary transition-colors">Dương Nội triển khai thí điểm hệ thống điều phối giao thông thông minh</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Dự án đánh dấu bước ngoặt trong việc ứng dụng AI vào quản lý đô thị, giúp giảm thiểu 20% tình trạng ùn tắc tại các nút giao trọng điểm...
+                        </p>
+</div>
+<!-- Side Stories -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<article class="flex gap-6 group cursor-pointer">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="cybersecurity concept with digital locks and data protection shields glowing on a screen" src="assets/cybersecurity.jpg"/>
+</div>
+<div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest">An ninh mạng</span>
+<h4 class="text-lg font-bold leading-tight mt-1 group-hover:text-secondary transition-colors">Tập huấn kỹ năng an toàn thông tin cho cư dân</h4>
+</div>
+</article>
+<article class="flex gap-6 group cursor-pointer">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="young students using tablets in a classroom for collaborative learning" src="assets/students.jpg"/>
+</div>
+<div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Giáo dục</span>
+<h4 class="text-lg font-bold leading-tight mt-1 group-hover:text-primary transition-colors">Khởi động cuộc thi Sáng tạo Robot trẻ cấp Phường</h4>
+</div>
+</article>
+<article class="flex gap-6 group cursor-pointer">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="clean graphs and business data on a tablet screen held by a professional" src="assets/graphs_tablet.jpg"/>
+</div>
+<div>
+<span class="text-[10px] font-bold text-tertiary uppercase tracking-widest">Kinh tế số</span>
+<h4 class="text-lg font-bold leading-tight mt-1 group-hover:text-tertiary transition-colors">Hỗ trợ hộ kinh doanh cá thể chuyển đổi hóa đơn điện tử</h4>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map -->
+<section class="py-24 bg-background">
+<div class="max-w-7xl mx-auto px-8">
+<div class="asymmetric-grid gap-12">
+<div class="col-span-12 lg:col-span-5 space-y-8">
+<h2 class="font-headline text-4xl font-bold tracking-tight">Liên hệ với chúng tôi</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-bold">Địa chỉ</p>
+<p class="text-on-surface-variant">Phố Lê Trọng Tấn, Phường Dương Nội, Quận Hà Đông, Hà Nội</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-bold">Email</p>
+<p class="text-on-surface-variant">pduongnoi_hadong@hanoi.gov.vn</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center flex-shrink-0 text-tertiary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-bold">Điện thoại</p>
+<p class="text-on-surface-variant">0243.351.2132</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low rounded-xl">
+<p class="font-bold mb-4">Gửi phản ánh/kiến nghị</p>
+<div class="flex flex-col gap-4">
+<input class="bg-white border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary" placeholder="Họ và tên" type="text"/>
+<textarea class="bg-white border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary" placeholder="Nội dung thông điệp" rows="3"></textarea>
+<button class="bg-primary text-on-primary py-3 rounded-md font-bold transition-transform active:scale-95">Gửi thông tin</button>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7">
+<div class="w-full h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="stylized map view of a suburban district with highlighted roads and points of interest" data-location="Duong Noi, Ha Dong, Hanoi" src="assets/map.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 font-['Inter'] text-sm">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-center md:text-left">
+<div class="text-lg font-bold text-slate-900 dark:text-white mb-2">Duong Noi Ward</div>
+<div class="text-slate-500 dark:text-slate-400">© 2024 Duong Noi Ward People's Committee. All rights reserved.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Accessibility</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Portal Map</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
